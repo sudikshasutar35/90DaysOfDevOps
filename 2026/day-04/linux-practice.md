@@ -93,6 +93,32 @@ Found systemd-related processes, including:
 - Inspected the cron service and verified that it was running.
 - Learned to view service-specific and system warning logs using `journalctl`.
 
+  ## 5. Mini Troubleshooting Flow
+
+### Scenario: Checking Cron Service Health
+
+**Step 1: Check service status**
+
+```bash
+systemctl status cron
+```
+
+Result: Cron service was active (running).
+
+**Step 2: Inspect service logs**
+
+```bash
+journalctl -u cron -n 20 --no-pager
+```
+
+Result: Reviewed recent Cron service activity and job execution logs.
+
+**Step 3: Verify the service**
+
+Confirmed that `cron.service` was active and enabled.
+
+**Conclusion:** Used service status and journal logs together to inspect Cron service health.
+
 ## Conclusion
 
 Successfully completed Day 04 Linux practice using Killercoda Ubuntu terminal. Practiced process monitoring, service inspection, and system log analysis.
